@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es">
+<head>  
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Breaking Bad</title>
+    <title>PokeAPI</title>
+    <style>
+        /* Un diseño rápido para que se vea como tarjeta */
+        .tarjeta-pokemon { text-align: center; border: 1px solid #a81616; padding: 80px; width: 300px; border-radius: 50px; font-family: sans-serif; }
+        .tarjeta-pokemon img { width: 120px; height: 120px; }
+    </style>
 </head>
 <body>
-    <h1>esta en una api de breaking bad</h1>
+    <h1>Pokedex</h1>
+    <!-- Contenedor donde el JavaScript inyectará el Pokémon -->
+    <div id="contenedor-pokemon" class="tarjeta-pokemon">
+        <p>Cargando Pokémon...</p>
+    </div>
+    
+    <input type="number" id="pokemon" placeholder="ID del Pokémon" required="Debe ingresar un numero">
+    <button onclick="obtenerPokemon()">Pedir Pokémon</button>
     <script src="api.js"></script>
+    
 </body>
 </html>
